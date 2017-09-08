@@ -14,6 +14,7 @@ public class Coord {
         this.y = y;
     }
 
+    //比较坐标
     @Override
     public boolean equals(Object obj){
         if (obj == null) return false;
