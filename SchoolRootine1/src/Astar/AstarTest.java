@@ -5,7 +5,8 @@ package Astar;
  */
 public class AstarTest {
 
-    static int PrintNum[]=new int[20];//存储将要打印的点
+    //存储将要打印的点
+    static int PrintNum[]=new int[20];
     public static void main(String[] args)
     {
         int[][] maps = {
