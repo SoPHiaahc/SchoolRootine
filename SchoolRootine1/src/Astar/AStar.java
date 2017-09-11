@@ -50,12 +50,15 @@ public class AStar {
     //在二维数组中绘制路径
     private void drawPath(int[][] maps, Node end)
     {
+        int temp;
         if(end==null||maps==null) return;
         System.out.println("总代价：" + end.G);
         while (end != null)
         {
             Coord c = end.coord;
             maps[c.y][c.x] = PATH;
+            temp = maps[c.y][c.x];
+            AstarTest.store(temp);
             System.out.print("("+c.x+" ,"+c.y+")"+"->");
 
 

@@ -5,6 +5,7 @@ package Astar;
  */
 public class AstarTest {
 
+    static int PrintNum[]=new int[20];//存储将要打印的点
     public static void main(String[] args)
     {
         int[][] maps = {
@@ -53,6 +54,19 @@ public class AstarTest {
         MapInfo info=new MapInfo(maps,maps[0].length, maps.length,new Node(0, 0), new Node(31, 34));
         new AStar().start(info);
         printMap(maps);
+        printNum(PrintNum);
+    }
+
+    //将要输出的点存储在数组中
+    public static void store(int temp){
+        for(int i=0;i<20;i++){
+            if(PrintNum[i]==0){
+                PrintNum[i]=temp;
+                break;
+            }
+
+        }
+
     }
 
     /**
@@ -70,4 +84,14 @@ public class AstarTest {
             System.out.println();
         }
     }
+
+    //将数组中的点打印出来
+    public static void printNum(int[] printNum){
+        System.out.println();
+        for(int i=0;i< printNum.length;  i++){
+            if (printNum[i]!=0)
+                System.out.print(printNum[i]+" ");
+        }
+    }
+
 }
